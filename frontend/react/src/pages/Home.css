@@ -98,7 +98,7 @@
 @media (max-width: 576px) {
   .slide {
     height: 60vh; /* Reduced height on mobile */
-    width: flex;
+    /* width: ; */
   }
 
   .left-arrow, .right-arrow {
