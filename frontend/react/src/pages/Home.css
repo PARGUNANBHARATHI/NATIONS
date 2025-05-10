@@ -1,8 +1,8 @@
-/* Global Styles for Slideshow */
+/* Main Slide Container */
 .slides {
   position: relative;
   width: 100%;
-  overflow: hidden; /* Prevent images from overflowing */
+  overflow: hidden;
 }
 
 .slider-container {
@@ -13,51 +13,61 @@
 .slides-container {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* Ensure the slides span the full container width */
+  width: 100%;
 }
 
 .slide {
   position: relative;
-  flex-shrink: 0; /* Prevent slides from shrinking */
-  width: 100%; /* Each slide should take full width */
-  height: 100vh; /* Full height of the viewport by default */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000; /* Fallback background color */
+  flex-shrink: 0;
+  width: 100%;
+  height: 100vh; /* desktop default */
 }
 
-/* Ensure that the image fits properly without stretching or distorting */
+.slide::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* fallback aspect ratio for mobile (16:9) */
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Make sure actual <img> inside slide (if used) scales well */
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the container, maintain aspect ratio */
+  object-fit: cover;
 }
 
-/* Arrow styling */
+/* Navigation Arrows */
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
   z-index: 10;
-  color: #fff;
-  font-size: 30px;
+  color: white;
+  font-size: 32px;
   cursor: pointer;
   transform: translateY(-50%);
   padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
 }
 
 .left-arrow {
-  left: 10px;
+  left: 15px;
 }
 
 .right-arrow {
-  right: 10px;
+  right: 15px;
 }
 
-/* Dot indicator */
+/* Dots */
 .dots-container {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -70,62 +80,57 @@
   width: 10px;
   height: 10px;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .dot.active {
-  background-color: #f1f1f1;
+  opacity: 1;
 }
 
-/* Responsive Styles for Mobile and Small Screens */
+/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
 
-/* Tablet or smaller screens */
+/* Tablets and below */
 @media (max-width: 768px) {
   .slide {
-    height: 70vh; /* Slightly smaller height on tablets */
+    height: auto;
   }
-
-  .slide img {
-    object-fit: cover; /* Maintain proper image scaling */
+  
+  .slide::before {
+    padding-top: 60%; /* slightly taller aspect ratio */
   }
 
   .left-arrow, .right-arrow {
-    font-size: 25px; /* Adjust arrow size */
+    font-size: 26px;
+    padding: 8px;
   }
 
-  .dots-container {
-    bottom: 20px; /* Adjust dot position for smaller screens */
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
 
-/* Small devices (Mobile Portrait) */
+/* Mobile screens */
 @media (max-width: 576px) {
   .slide {
-    height: 60vh; /* Reduced height on mobile */
+    height: auto;
   }
 
-  .slide img {
-    object-fit: cover; /* Maintain the cover fit for mobile */
+  .slide::before {
+    padding-top: 70%; /* make slides a bit taller on narrow screens */
   }
 
   .left-arrow, .right-arrow {
-    font-size: 20px; /* Smaller arrows for mobile */
+    font-size: 22px;
+    padding: 6px;
   }
 
-  .dots-container {
-    bottom: 30px; /* Adjust the dot container position */
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
 
-/* Large screens, can handle larger images */
-@media (min-width: 1200px) {
-  .slide {
-    height: 80vh; /* Larger height for bigger screens */
-  }
-
-  .slide img {
-    object-fit: cover; /* Maintain cover fit for large screens */
-  }
-}
 
 
 /* who we are  */
