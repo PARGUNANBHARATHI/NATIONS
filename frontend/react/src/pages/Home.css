@@ -125,9 +125,38 @@
 }
 
 
+/* test */
 
+.slide {
+  height: auto; /* Allow the height to adjust according to the aspect ratio of the image */
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  display: block;
+  margin-top: 0; /* Remove the margin-top */
+}
 
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition when moving between slides */
+}
 
+.slide img {
+  width: 100%; /* Make sure the image fills the width of the container */
+  height: 100%; /* Fill the container's height */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 50vh; /* Adjust the height on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .slide {
+    height: 40vh; /* Adjust even further for very small screens */
+  }
+}
 
 
 
