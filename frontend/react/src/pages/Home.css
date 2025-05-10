@@ -80,18 +80,21 @@
 @media (max-width: 1200px) {
   .slide {
     height: 350px;
+      width: fit-content;
   }
 }
 
 @media (max-width: 992px) {
   .slide {
     height: 300px;
+      width: fit-content;
   }
 }
 
 @media (max-width: 768px) {
   .slide {
     height: 250px;
+      width: fit-content;
   }
 
   .left-arrow,
@@ -104,6 +107,7 @@
 @media (max-width: 576px) {
   .slide {
     height: 200px;
+    width: fit-content;
   }
 
   .left-arrow,
