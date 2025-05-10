@@ -2,7 +2,7 @@
 .slider-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Slides wrapper */
@@ -27,7 +27,6 @@
   transform: translateY(-50%);
   font-size: 2rem;
   color: white;
-  background: rgba(0, 0, 0, 0.4);
   padding: 0.5rem;
   cursor: pointer;
   z-index: 10;
