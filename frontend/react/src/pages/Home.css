@@ -39,7 +39,7 @@
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: flex;
+  object-fit: contain;
 }
 
 /* Navigation Arrows */
