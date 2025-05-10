@@ -106,9 +106,9 @@
 
 @media (max-width: 576px) {
   .slide {
-    margin-top: 20%;
+    margin-top: 30%;
     height: 200px;
-    width: fit-content;
+    width: 100%;
   }
 
   .left-arrow,
