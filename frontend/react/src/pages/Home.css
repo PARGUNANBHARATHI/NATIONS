@@ -1,31 +1,29 @@
-/* Slider container */
+/* Slider outer wrapper */
 .slides {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
+/* Slider container */
 .slider-container {
   position: relative;
   width: 100%;
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
+/* Track of slides */
 .slides-container {
   display: flex;
   width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
+/* Each slide */
 .slide {
-  min-width: 100%;
+  flex: 0 0 100%; /* ensure each slide takes 100% width */
   height: 400px;
   background-size: cover;
   background-position: center;
-  transition: background-image 0.5s ease-in-out;
 }
 
 /* Arrows */
@@ -72,17 +70,10 @@
   background-color: #333;
 }
 
-/* Form container */
+/* Form container (Bootstrap already helps here) */
 .container {
   max-width: 800px;
   margin: 0 auto;
-}
-
-form input,
-form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
 }
 
 /* Responsive heights */
@@ -127,12 +118,6 @@ form button {
     margin: 0 3px;
   }
 }
-
-
-
-
-
-
 
 
 
