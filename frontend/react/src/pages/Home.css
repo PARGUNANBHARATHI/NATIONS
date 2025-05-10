@@ -1,139 +1,89 @@
-/* Main Slide Container */
-.slides {
+/* Main container */
+.slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.slider-container {
-  position: relative;
-  width: 100%;
-}
-
+/* Slides wrapper */
 .slides-container {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
+/* Individual slide */
 .slide {
-  position: relative;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100vh; /* desktop default */
-}
-
-.slide::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%; /* fallback aspect ratio for mobile (16:9) */
-}
-
-.slide {
+  min-width: 100%;
+  height: 100vh; /* Fullscreen height */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* Make sure actual <img> inside slide (if used) scales well */
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Navigation Arrows */
+/* Arrows */
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
-  z-index: 10;
-  color: white;
-  font-size: 32px;
-  cursor: pointer;
   transform: translateY(-50%);
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
   border-radius: 50%;
 }
 
 .left-arrow {
-  left: 15px;
+  left: 1rem;
 }
 
 .right-arrow {
-  right: 15px;
+  right: 1rem;
 }
 
 /* Dots */
 .dots-container {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 5;
 }
 
 .dot {
-  background-color: #fff;
-  border-radius: 50%;
+  height: 12px;
+  width: 12px;
   margin: 0 5px;
-  width: 10px;
-  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
   cursor: pointer;
-  opacity: 0.6;
 }
 
 .dot.active {
   opacity: 1;
+  background-color: #007bff;
 }
 
-/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
-
-/* Tablets and below */
-@media (max-width: 768px) {
+/* Mobile adjustments */
+@media (max-width: 576px) {
   .slide {
     height: auto;
-  }
-  
-  .slide::before {
-    padding-top: 60%; /* slightly taller aspect ratio */
+    max-height: 400px;
   }
 
   .left-arrow, .right-arrow {
-    font-size: 26px;
-    padding: 8px;
+    font-size: 1.5rem;
+    padding: 0.3rem;
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
+    height: 10px;
+    width: 10px;
   }
 }
-
-/* Mobile screens */
-@media (max-width: 576px) {
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top; /* or adjust: center center, center bottom */
-  }
-}
-
-  .slide::before {
-    padding-top: 70%; /* make slides a bit taller on narrow screens */
-  }
-
-  .left-arrow, .right-arrow {
-    font-size: 22px;
-    padding: 4px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
-
 
 
 

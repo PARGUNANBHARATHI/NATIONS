@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from "react-router-dom"
-import axios from "axios"
-import { ToastContainer, toast } from "react-toastify";
-import "./Home.css"
+import React, { useState, useEffect } from 'react';
+import './Home.css';
 
 function Home() {
   const slides = [
@@ -15,6 +12,7 @@ function Home() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
@@ -22,119 +20,65 @@ function Home() {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-
   const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
 
-
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-
-  const onsubmit = async (e) => {
-    e.preventDefault();
-
-    if (!name || !email) {
-      return toast.warning("Must required name and email");
-    }
-
-    try {
-      const { data } = await axios.post("https://nft1-backend.onrender.com/data", { name, email });
-
-      if (data.error) {
-        return toast.error(data.error);
-      }
-      else {
-        setemail("");
-        setname("");
-        toast.success("Successfuly submit");
-      }
-
-    }
-
-    catch (error) {
-      console.log(error);
-    }
-
-
-  };
   return (
-
-    <div>
-      <ToastContainer />
-      <div className="slides">
-
-        <div className="slider-container">
-          <div className="slider">
-            <div className="slides-container"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-                <div
-                  className="slide"
-                  key={index}
-                  style={{ backgroundImage: `url(${slide.url})` }}
-
-                ></div>
-              ))}
-            </div>
-          </div>
-
-          {/* Left Arrow */}
-          <div className="left-arrow" onClick={goToPrevious}>&#10094;</div>
-
-          {/* Right Arrow */}
-          <div className="right-arrow" onClick={goToNext}>&#10095;</div>
-
-          {/* Dots Indicator */}
-          <div className="dots-container">
-            {slides.map((_slide, slideIndex) => (
-              <div
-                className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
-              ></div>
-            ))}
-          </div>
-        </div>
+    <div className="slider-container">
+      <div
+        className="slides-container"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div
+            className="slide"
+            key={index}
+            style={{ backgroundImage: `url(${slide.url})` }}
+          ></div>
+        ))}
       </div>
+
+      {/* Arrows */}
+      <div className="left-arrow" onClick={goToPrevious}>
+        &#10094;
+      </div>
+      <div className="right-arrow" onClick={goToNext}>
+        &#10095;
+      </div>
+
+      {/* Dots */}
+      <div className="dots-container">
+        {slides.map((_, slideIndex) => (
+          <div
+            key={slideIndex}
+            className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
+            onClick={() => goToSlide(slideIndex)}
+          ></div>
+        ))}
+      </div>
+
+{/* 
+SLIDE SECTION END */}
+
+
+
 
 
       <div className="container my-5">
   <div className="row align-items-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div className="container my-5">
   <div className="row align-items-center">
