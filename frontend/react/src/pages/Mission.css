@@ -1,0 +1,179 @@
+/* Existing styles (unchanged) */
+.bg-light {
+  background-color: #FF9933;
+}
+
+.shadow-sm {
+  transition: transform 0.2s ease-in-out;
+  color: rgb(14, 26, 163);
+}
+
+.shadow-sm:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Caption Component */
+.image-caption {
+  background-color: #fffefeeb;
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+   margin-left: auto;
+  
+  max-width: 100%;
+  box-shadow: 0.125rem 0.25rem rgba(49, 231, 3, 0.075);
+}
+
+.image-caption h5 {
+  color: #0d6efd;
+  margin-bottom: 0 !important;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* Mission Content */
+.mission-content {
+  background-color: white;
+  border-left: 4px solid #007bff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(7, 201, 14, 0.824);
+  line-height: 1.7;
+  text-align: justify; 
+  padding: 30px; /* default padding for larger screens */
+}
+
+.mission-content p {
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.mission-content p.lead {
+  font-size: 1.3rem;
+  /* color: #007bff; */
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ===========================
+   Responsive Media Queries
+   =========================== */
+
+/* Extra Small Devices (phones <576px) */
+@media (max-width: 575.98px) {
+  .mission-content {
+    padding: 15px;
+    margin-right:20px;
+    font-size: 1rem;
+    
+  }
+
+  .image-caption {
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .mission-content {
+    padding: 20px;
+    
+    
+  }
+
+  .mission-content p {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+/* Medium Devices (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .mission-content {
+    padding: 25px;
+    
+  }
+
+  .mission-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large Devices (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .mission-content {
+    padding: 30px;
+  }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) {
+  .mission-content {
+    padding: 40px;
+  }
+}
+
+
+/* Small devices (phones) */
+@media (max-width: 575.98px) {
+  .mission-image-wrapper {
+    margin-left: 0;
+    margin-right: 20px;
+    
+  }
+
+  .mission-image-wrapper img {
+    max-height: 300px;
+    border-radius: 0.5rem;
+    margin-top: 60px;
+
+ margin-left:10px ;
+
+
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .mission-image-wrapper {
+    margin-left: 1rem;
+    margin-top: 30px;
+  }
+
+  .mission-image-wrapper img {
+    max-height: 400px;
+  }
+}
+
+/* Large devices (laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .mission-image-wrapper {
+    margin-left: 2rem;
+  }
+
+  .mission-image-wrapper img {
+    max-height: 500px;
+  }
+}
+
+/* Extra large devices (desktops and up) */
+@media (min-width: 992px) {
+  .mission-image-wrapper {
+    margin-left: 3rem;
+  }
+}
