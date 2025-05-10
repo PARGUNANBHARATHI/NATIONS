@@ -114,6 +114,7 @@
 @media (max-width: 576px) {
   .slide {
     height: auto;
+    width: min-content;
   }
 
   .slide::before {
@@ -122,7 +123,7 @@
 
   .left-arrow, .right-arrow {
     font-size: 22px;
-    padding: 6px;
+    padding: 4px;
   }
 
   .dot {
