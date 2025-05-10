@@ -97,8 +97,8 @@
 /* Small devices (Mobile Portrait) */
 @media (max-width: 576px) {
   .slide {
-    height: 50vh; /* Reduced height on mobile */
-    width: 100ch;
+    height: 60vh; /* Reduced height on mobile */
+    width: 100%;
   }
 
   .left-arrow, .right-arrow {
