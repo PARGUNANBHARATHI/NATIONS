@@ -1,9 +1,226 @@
+/* Home.css */
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Slider Container */
+.slides {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed */
+  max-height: 800px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slides Container */
+.slides-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  margin: auto;
+  margin-left: auto;
+}
+
+.slide {
+
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+/* Navigation Arrows */
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+  left: 25px;
+}
+
+.right-arrow {
+  right: 25px;
+}
+
+/* Dots Indicator */
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 187, 0, 0.994);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgb(255, 0, 0);
+  transform: scale(1.2);
+}
+
+/* Form Styles */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #5a52d3;
+}
 
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    height: 45vh;
+    max-height: 400px;
+  }
+  
+  .slide {
+    background-size: contain;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+}
 
+  .left-arrow,
+  .right-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left-arrow {
+    left: 15px;
+  }
+
+  .right-arrow {
+    right: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slider-container {
+    height: 60vh;
+  }
+}
+
+/* Toast Notifications */
+.Toastify__toast-container {
+  font-size: 14px;
+}
+
+.Toastify__toast--success {
+  background: #4caf50;
+}
+
+.Toastify__toast--warning {
+  background: #ff9800;
+}
+
+.Toastify__toast--error {
+  background: #f44336;
+}
+
+/* slide section end */
+/* who we are  */
 .heading {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #ff5500;
   }
   
@@ -11,19 +228,73 @@
   .vision-text p,
   .mission-text p {
     margin: auto;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     text-align: justify;
-    font-family: 'Poppins', sans-serif;
     color: #0056b3;
+    padding: 0 2rem; /* Added padding for better mobile readability */
+    font-weight: 600;
   }
   
   .signature {
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #059817;
   }
   
+
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .intro-text p,
+  .vision-text p,
+  .mission-text p {
+    font-size: 1.5rem; /* Slightly smaller font for mobile */
+    text-align: left; /* Left-align for better mobile readability */
+    line-height: 1.5; /* Increased line height for mobile */
+    padding:  0.5rem; /* Reduced side padding */
+        text-align: justify;
+  }
+
+  .signature {
+    font-size: 1.1rem; /* Slightly smaller signature */
+    text-align: center; /* Center signature on mobile */
+    padding: 0.5rem 0; /* Add vertical padding */
+    margin-top: 1rem; /* Space above signature */
+  }
+}
+
+/* Tablet Responsive Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro-text p,
+  .vision-text p,
+  .mission-text p {
+    font-size: 1.1rem; /* Intermediate font size */
+    padding: 0 0.75rem; /* Intermediate padding */
+  }
+}
+
+/* 
+who we are mobile view */
+
+@media (max-width: 768px)  {
+    .heading {
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #ff5500;
+   text-align: center;
+    
+  }
+}
+/* slide mobile view */
+@media (max-width: 768px) {
+.slider-container{
+   margin-top: 2%; 
+}
+}
+
+
 
 
 
@@ -38,17 +309,18 @@
   /* Image Styling */
   .custom-image-container img {
     width: 100%;
-    height: 400px;
+    height: auto;
     object-fit: flex; /* Ensure the image covers the div while maintaining aspect ratio */
     transition: transform 0.3s ease-in-out;
     border-radius: 15px; /* Matching rounded corners for a smoother look */
     margin-left: 20ch;
+
   }
   
   /* Hover effect on the image */
   .custom-image-container img:hover {
     transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    box-shadow: 0 4px 10px rgba(50, 251, 0, 0.2); /* Add shadow on hover */
   }
   
   /* Media Query for Smaller Screens */
@@ -143,7 +415,7 @@
 .container-paragraph .paragraph p {
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 25px;
-    font-size: 10px;
+    font-size: 15px;
     text-align: justify;
     text-align-last: justify;
 
@@ -172,13 +444,44 @@
     height: 100%;
 }
 img {
-  
+
     width: 100%;           /* Let the image fill the width of its container */
     height: auto;          /* Maintain aspect ratio */
     display: block;        /* Removes bottom space from inline images */
     max-width: 100%;       /* Prevents it from stretching beyond container */
     object-fit: flex;  /*  ok Prevents it from stretching beyond container */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* join our community ok  */

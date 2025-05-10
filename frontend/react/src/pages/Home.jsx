@@ -79,7 +79,7 @@ function Home() {
       <ToastContainer />
       <div className="slides">
 
-        <div className="slider-container">
+        <div className="slider-container mt-0">
           <div className="slider">
             <div className="slides-container"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -115,7 +115,8 @@ function Home() {
       </div>
 
 
-      <div className="container my-5">
+
+      <div className="container my-5 mt-0">
   <div className="row align-items-center">
 
 
@@ -136,8 +137,8 @@ function Home() {
 
 
 
-  <div className="container my-5">
-  <div className="row align-items-center">
+  <div className="container my-5 mt-2">
+  <div className="row align-items-center ">
     {/* Paragraph Container (Left Side) */}
     <div className="col-lg-7 mb-0 ">
       <h2 className="heading mb-0 ms-1 ">Who We Are</h2>
@@ -170,7 +171,7 @@ function Home() {
 
     {/* Image Container (Right Side) */}
     <div className="col-lg-5 text-center">
-  <div className="custom-image-container">
+  <div className="custom-image-container mt-5">
     <img
       src="images/homein.png"
       alt="Who We Are"
