@@ -97,8 +97,11 @@
 /* Small devices (Mobile Portrait) */
 @media (max-width: 576px) {
   .slide {
-    height: 100vh; /* Reduced height on mobile */
+    height: 60vh; /* Reduced height on mobile */
+  }
 
+  .slide img {
+    object-fit: cover; /* Maintain the cover fit for mobile */
   }
 
   .left-arrow, .right-arrow {
@@ -109,6 +112,7 @@
     bottom: 30px; /* Adjust the dot container position */
   }
 }
+
 
 /* Large screens, can handle larger images */
 @media (min-width: 1200px) {
