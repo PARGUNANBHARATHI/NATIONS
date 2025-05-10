@@ -1,150 +1,166 @@
-/* Slider container */
-.slides {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
 
 .slider-container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    height: 580px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    height: 100%;
 }
 
 .slides-container {
-  display: flex;
-  width: 100%;
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 0.5s ease-in-out;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 /* Arrows */
-.left-arrow, .right-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  user-select: none;
-  z-index: 10;
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 18px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .left-arrow {
-  left: 10px;
+    left: 0;
 }
 
 .right-arrow {
-  right: 10px;
+    right: 0;
 }
 
-/* Dots */
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Dots container */
 .dots-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .dot.active {
-  background-color: #333;
-}
-
-/* Form container */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-form input,
-form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-/* Responsive heights */
-@media (max-width: 1200px) {
-  .slide {
-    height: 350px;
-  }
-}
-
-@media (max-width: 992px) {
-  .slide {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slide {
-    height: 250px;
-  }
-
-  .left-arrow,
-  .right-arrow {
-    font-size: 1.5rem;
-    padding: 0.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .slide {
-    height: 200px;
-  }
-
-  .left-arrow,
-  .right-arrow {
-    font-size: 1.2rem;
-    padding: 0.2rem;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 3px;
-  }
+    background-color: rgba(255, 255, 255, 1);
 }
 
 
 
 
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width:1600px) {
+    .slider-container {
+        height: 430px;
+    }
+
+    .slide {
+        background-position-y: -10px;
+    }
+
+}
+
+@media (max-width:1340px) {
+    .slider-container {
+        height: 350px;
+    }
+
+    .slide {
+        
+        background-position-y: -50px;
+    }
+   
+}
 
 
+@media (max-width:1020px) {
+    .slider-container {
+        height: 280px;
+    }
+
+}
+
+@media (max-width:860px) {
+    .slider-container {
+        height: 240px;
+    }
+    .slide{
+        background-position-y: -15px;
+    }
+
+}
+
+@media(max-width:650px) {
+    .slider-container {
+        height: 200px;
+    }
+    .slide{
+    background-position-y:-10px ;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width:480px) {
+    .slider-container {
+        height:160px;
+    }
+    .slide{
+        background-position-x:-15px ;
+        
+        }
+}
+
+@media (max-width:390px) {
+    .slider-container {
+        height: 500px;
+   
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-/* who we are  */
 
 
 .heading {
