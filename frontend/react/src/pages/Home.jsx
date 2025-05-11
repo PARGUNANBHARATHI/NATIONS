@@ -197,35 +197,73 @@ function Home() {
 
 
 
-      <div className="container1">
+      <div className="container1 ">
+        
+        <div className='join-commu mt-20'>       
+<div className="d-flex flex-column justify-content-center   gap-4">
 
-        <div className='join-commu'>
-          {/* <h5>Nation's First Trust</h5>  */}
-          {/* <h4>Get involved in our social welfare and charity<br></br>initiatives</h4> */}
-          {/* <h4>Join our foundation today and start building<br></br> the
-          future of our society.</h4>  */}
-<div className="d-flex flex-column justify-content-center align-items-center gap-3">
-  <Link className="btn-custom btn-custom-success" to="/Donation">
-    Make a Donation🤍
-  </Link>
-  <Link className="btn-custom btn-custom-primary" to="/Volunteer">
-    Become a Volunteer
-  </Link>
+<Link className="btn-custom btn-custom-success heartbeat" to="/Donation">
+  Make a Donation🤍
+</Link>
+<Link className="btn-custom btn-custom-primary heartbeat" to="/Volunteer">
+  Become a Volunteer
+</Link>
+ 
+</div>
+        </div>
+
+
+<div className="image-flex-container me-10">
+  <img
+    src="/images/homejoin.svg"
+    alt="Join Us Illustration"
+    className="responsive-image"
+  />
 </div>
 
-        </div>
-      
-        <img src='images/homejoin.svg'></img>
       </div>
-      <div className="background-image">
-        <div className="backgroun-image-head">
+
+
+
+
+
+   <div className="container2-discription ">Your kindness can spark a change,
+a small gift can lift a life.<br></br>
+Donate today, inspire tomorrow.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <div className="background-image ">
+        <div className="backgroun-image-head mt-1">
           <h5>Testimonials</h5>
           <h2>Empowering Lives, Enriching Futures</h2>
           <h4>Building a brighter future, together.</h4>
         </div>
       </div>
 
-      <div className="input-head">
+      <div className="input-head ">
         <h6>Join Us</h6>
         <h3>Sign up to hear from us about our new activities.</h3>
       </div>

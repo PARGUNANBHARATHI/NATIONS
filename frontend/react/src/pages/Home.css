@@ -152,15 +152,17 @@ body {
   background-color: #5a52d3;
 }
 
+/* ---------------Slide Mobile adjustments-----------  */ 
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .slider-container {
+
     height: 45vh;
     max-height: 400px;
   }
   
   .slide {
+
     background-size: contain;
     background-color: #ffffff; /* Add background color for empty space */
   }
@@ -191,6 +193,66 @@ body {
     padding: 0 15px;
   }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slider-container {
+  
+    height: 45vh;
+    max-height: 400px;
+  }
+
+  .slide {
+    background-size: contain;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+
+  .left-arrow,
+  .right-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left-arrow {
+    left: 15px;
+  }
+
+  .right-arrow {
+    right: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tablet Responsiveness */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -217,7 +279,7 @@ body {
 }
 
 /* slide section end */
-/* who we are  */
+/*---------------------------- who we are-----------------------------  */
 .heading {
     font-size: 1.8rem;
     font-weight: 600;
@@ -276,7 +338,7 @@ body {
 }
 
 /* 
-who we are mobile view */
+------------------------who we are mobile view-------------------------------------------------------------- */
 
 @media (max-width: 768px)  {
     .heading {
@@ -299,7 +361,7 @@ who we are mobile view */
 
 
 
-/* Custom Image Container Styling */
+/* india that is barat Custom Image Container Styling */
 .custom-image-container {
     position: relative;
     /* overflow: hidden; */
@@ -323,18 +385,19 @@ who we are mobile view */
     box-shadow: 0 4px 10px rgba(50, 251, 0, 0.2); /* Add shadow on hover */
   }
   
+
+
+
   /* Media Query for Smaller Screens */
   @media (max-width: 767px) {
     .custom-image-container img {
+
       width: 100%;
       height: auto;
-      margin-left: 10ch;
+      margin-left: 2.5ch;
     }
   }
   
-
-
-
 /* Base styling (applies to all sizes) */
 .custom-image-container img {
     width: 100%;
@@ -350,7 +413,8 @@ who we are mobile view */
       width: 100%;
       height: auto;
       margin-left: 0ch;
-     
+
+  
     }
   }
   
@@ -359,6 +423,9 @@ who we are mobile view */
     .custom-image-container img {
       width: 100%;
       height: auto;
+      
+      
+    
     }
   }
   
@@ -394,67 +461,71 @@ who we are mobile view */
     }
   }
   
-
-
-.container-paragraph {
-
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 50px;
-    justify-content: space-around;
-    margin: 100px 0px;
+/* chartiy will make you rich-----------------------------------------------------------  */
+.image-flex-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 5px;
+    height: auto;
 
 }
 
-.container-paragraph .paragraph h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(14, 26, 163);
-    margin-left: 25px;
+.responsive-image {
+  width: 100%;
+  max-width: 100%; /* 24rem */
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: auto;
 }
 
-.container-paragraph .paragraph p {
-    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 25px;
-    font-size: 15px;
-    text-align: justify;
-    text-align-last: justify;
-
-  
-}
-
-.container-paragraph .paragraph p:hover {
-
-    background-color: rgb(245, 66, 6);
-    transition-duration: 1.5s;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 23px;
-}
-
-.container-paragraph .paragraph h3{
-    color: rgb(124, 23, 142);
-    display: flex;
-    justify-content: end;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-.container1 {
-    width: auto;
-    height: 100%;
-}
-img {
-
-    width: 100%;           /* Let the image fill the width of its container */
-    height: auto;          /* Maintain aspect ratio */
-    display: block;        /* Removes bottom space from inline images */
-    max-width: 100%;       /* Prevents it from stretching beyond container */
-    object-fit: flex;  /*  ok Prevents it from stretching beyond container */
+.responsive-image:hover {
+  transform: scale(1.04);
 }
 
 
 
 
+/* ---------------------------------small screes  */
+@media (max-width: 575.98px) {
+
+
+
+
+
+
+}
+
+
+/* Mobile phones (up to 599px)------------------------------------------------- */
+@media (max-width: 599px) {
+
+
+
+
+
+
+
+
+
+}
+
+/* Tablets (576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+
+
+
+
+}
+
+/* Devices above 600px (optional general rule for medium+ screens) */
+@media (min-width: 600px) {
+
+
+}
 
 
 
@@ -484,7 +555,7 @@ img {
 
 
 
-/* join our community ok  */
+/* join our community ok --------------------------------------------------------------- */
 
 
 .join-commu {
@@ -536,10 +607,11 @@ img {
   
 /* bootsstrap */
 
-
+/* make donation buttons, volunteers  */
 /* Base button style */
 .btn-custom {
-
+    margin-top: 100%;
+    
     display: inline-block;
     padding: 1px 34px;
     font-size: 25px;
@@ -563,6 +635,7 @@ img {
   .btn-custom-primary {
     background-color: #ffb300;
     font-family: 'Poppins', sans-serif;
+    margin-top: auto;
   }
   
   .btn-custom-primary:hover {
@@ -579,22 +652,78 @@ img {
     background-color: #1e7e34;
   }
 
-
+/* btn animations ----------------------- */
   
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 5.5s infinite;
+  transform-origin: center;
+}
+
+.container2-discription {
+  bottom: 0%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f72b2b;
+  background-color:white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: 500px;
+  margin-right: auto;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Small devices (phones, less ok than 600px) */
+
+/* make donation buttons, volunteers  */
  @media (max-width: 599px) {
     .btn-custom-primary
   {
+        margin-right: auto;
       width: 100%;         
-      max-width: 300px;    
-      margin-right: 0px;      
+      max-width: 200px;    
       margin-bottom: 0px;  
-      font-size: 7px;      
+      font-size: 15px;      
       height: 10%;       
-       padding: 2px 2px;    
-         margin-right: 40%;
+       padding: 4px 10px; 
+        margin-left:7ch      
   
           
     }
@@ -604,30 +733,159 @@ img {
 
  @media (max-width: 599px) {
     .btn-custom-success {
+     margin-right: auto;
       width: 100%;         
-      max-width: 300px;    
-      margin-right:0;      
+      max-width: 200px;    
       margin-bottom: 0px;  
-      font-size: 7px;      
+      font-size: 15px;      
       height: 10%;       
-       padding: 2px 2px;    
-      margin-top: 15ch;
-      margin-right: 40%;
-   
+       padding: 4px 10px;    
+      margin-top: 20ch;
+    margin-left:7ch    
+ 
+
+         
 
     }
   } 
+
+ /* Small devices (portrait tablets and large phones, ≥576px)  */
+
+/* make donation buttons, volunteers  */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .btn-custom-primary {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0%;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 5px 6px;
+  }
+
+  .btn-custom-success {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0%;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 5px 6px;
+    margin-top: 10ch;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium and larger devices (tablets and up, 600px and above) */
+/* @media (min-width: 600px) {
+  .btn-custom-primary {
+   
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-size: 7px;
+    height: 10%;
+    padding: 2px 2px;
+    margin-right: 40%;
+  }
+
+  .btn-custom-success {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    font-size: 7px;
+    height: 10%;
+    padding: 2px 2px;
+    margin-top: 15ch;
+    margin-right: 50%;
+  }
+} */
+
+
+@media (max-width: 599px) {
+  .container2-discription {
+    font-size: 1.1rem;
+    padding: 0px 1px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    color: #ddd;
+    max-width: 80%;
+    text-align: center;
+    background: #242f63;
+   box-shadow: 0 5px 12px rgba(64, 252, 7, 0.08); 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 .background-image {
-    background-image: url("/images/testimonials.svg");
+  margin-top: 300px;
+      background-image: url("/images/testimonials.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
 
-    margin-top: 140px;
     height: 300px;
 
     line-height: 40px;
