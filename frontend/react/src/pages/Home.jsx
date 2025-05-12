@@ -246,17 +246,13 @@ Donate today, inspire tomorrow.</div>
 
 
 
-
-
-
-
-
+{/* testimonials ---------------------------------------------------------------------*/}
 
 
 
       
-      <div className="background-image ">
-        <div className="backgroun-image-head mt-1">
+      <div className="background-image mt-6">
+        <div className="backgroun-image-head mt-0">
           <h5>Testimonials</h5>
           <h2>Empowering Lives, Enriching Futures</h2>
           <h4>Building a brighter future, together.</h4>

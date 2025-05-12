@@ -135,7 +135,7 @@ body {
   outline: none;
   border-color: #6c63ff;
 }
-
+/* 
 .submit-btn {
   padding: 12px 20px;
   background-color: #6c63ff;
@@ -146,19 +146,37 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-}
+} */
 
 .submit-btn:hover {
   background-color: #5a52d3;
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ 
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------Slide Mobile adjustments-----------  */ 
 
 @media (max-width: 768px) {
   .slider-container {
-
-    height: 45vh;
-    max-height: 400px;
+     margin-top: 0%;
+    height: 52vh;
+    max-height: 800px;
   }
   
   .slide {
@@ -195,9 +213,9 @@ body {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .slider-container {
-  
+
     height: 45vh;
-    max-height: 400px;
+    max-height: 500px;
   }
 
   .slide {
@@ -235,30 +253,25 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Tablet Responsiveness */
 @media (min-width: 769px) and (max-width: 1024px) {
   .slider-container {
-    height: 60vh;
+    /* height: 33ch; */
+    width: auto;
+
+  
+    
+  
   }
+  .slide {
+    background-size: contain;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+
+
+
+
+
 }
 
 /* Toast Notifications */
@@ -277,6 +290,42 @@ body {
 .Toastify__toast--error {
   background: #f44336;
 }
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ 
+  .slider-container {
+     margin-top: 0px;
+    height: 35ch; 
+    width: auto;
+
+  
+    
+  
+  }
+  .slide {
+    margin-top: 0px;
+    background-size: flex;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* slide section end */
 /*---------------------------- who we are-----------------------------  */
@@ -312,11 +361,11 @@ body {
   .intro-text p,
   .vision-text p,
   .mission-text p {
-    font-size: 1.5rem; /* Slightly smaller font for mobile */
-    text-align: left; /* Left-align for better mobile readability */
-    line-height: 1.5; /* Increased line height for mobile */
+    font-size: 1.4rem; /* Slightly smaller font for mobile */
+    text-align: auto; /* Left-align for better mobile readability */
+    line-height: 1.1; /* Increased line height for mobile */
     padding:  0.5rem; /* Reduced side padding */
-        text-align: justify;
+    text-align: justify;
   }
 
   .signature {
@@ -348,7 +397,29 @@ body {
    text-align: center;
     
   }
+  .intro-text p,
+  .vision-text p,
+  .mission-text p {
+    font-size: 1.1rem; /* Intermediate font size */
+    padding: 0 0.75rem; /* Intermediate padding */
+  }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 /* slide mobile view */
 @media (max-width: 768px) {
 .slider-container{
@@ -388,7 +459,7 @@ body {
 
 
 
-  /* Media Query for Smaller Screens */
+  /* Media Query for Smaller Screens ==========================*/
   @media (max-width: 767px) {
     .custom-image-container img {
 
@@ -432,8 +503,9 @@ body {
   /* MD: ≥768px */
   @media (min-width: 768px) and (max-width: 991.98px) {
     .custom-image-container img {
-      width: 100%;
+      width: auto;
       height: auto;
+      margin-left: 0ch;
     }
   }
   
@@ -463,10 +535,10 @@ body {
   
 /* chartiy will make you rich-----------------------------------------------------------  */
 .image-flex-container {
-  display: flex;
+  display: cover;
   justify-content: left;
   align-items: center;
-  padding: 0px 5px;
+  padding: 0px 1px;
     height: auto;
 
 }
@@ -489,6 +561,29 @@ body {
 
 /* ---------------------------------small screes  */
 @media (max-width: 575.98px) {
+.image-flex-container {
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 5px;
+    height: auto;
+
+}
+
+.responsive-image {
+
+  width: 100%;
+  max-width: 100%; /* 24rem */
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.responsive-image:hover {
+  transform: scale(1.04);
+}
 
 
 
@@ -740,14 +835,25 @@ body {
       font-size: 15px;      
       height: 10%;       
        padding: 4px 10px;    
-      margin-top: 20ch;
+      margin-top: 25ch;
     margin-left:7ch    
- 
-
-         
 
     }
-  } 
+
+.container2-discription {
+
+padding: 10%;
+
+
+  
+}
+
+
+
+}
+
+
+  
 
  /* Small devices (portrait tablets and large phones, ≥576px)  */
 
@@ -776,83 +882,81 @@ body {
 }
 
 
+/* Mid-size devices (400px to 700px) */
+@media (min-width: 400px) and (max-width: 1200px) {
+  .btn-custom-primary {
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 4px 10px;
+    margin-left: 7ch;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .btn-custom-success {
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 4px 10px;
+    margin-top: 60ch;
+    margin-left: 7ch;
+  }
+}
 
 
 
 
 /* Medium and larger devices (tablets and up, 600px and above) */
-/* @media (min-width: 600px) {
+ @media (min-width: 600px) {
   .btn-custom-primary {
    
+    margin-right: auto;
     width: 100%;
-    max-width: 300px;
-    margin-right: 0px;
+    max-width: 200px;
     margin-bottom: 0px;
-    font-size: 7px;
+    font-size: 15px;
     height: 10%;
-    padding: 2px 2px;
-    margin-right: 40%;
+    padding: 4px 10px;
+    margin-left: 7ch;
   }
 
   .btn-custom-success {
+  margin-right: auto;
     width: 100%;
-    max-width: 300px;
-    margin-right: 0;
+    max-width: 200px;
     margin-bottom: 0px;
-    font-size: 7px;
+    font-size: 15px;
     height: 10%;
-    padding: 2px 2px;
-    margin-top: 15ch;
-    margin-right: 50%;
+    padding: 6px 10px;
+    margin-left: 7ch;
+        margin-top: 50ch;
   }
-} */
+}  
 
 
 @media (max-width: 599px) {
   .container2-discription {
     font-size: 1.1rem;
-    padding: 0px 1px;
-    margin-top: 50px;
+    padding: 15px 4px;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
-    color: #ddd;
+    color: #ffffff;
     max-width: 80%;
     text-align: center;
-    background: #242f63;
+    background: #ff5100;
    box-shadow: 0 5px 12px rgba(64, 252, 7, 0.08); 
   }
+
+
+
+
 }
 
 
@@ -867,34 +971,28 @@ body {
 
 
 
-
-
-
-
-
-
+/* testimonials ---------------------------------------------------------------------*/
 
 
   
 
 .background-image {
-  margin-top: 300px;
+  margin-top: 100px;
       background-image: url("/images/testimonials.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
-
-    height: 300px;
-
+    height: 400px;
     line-height: 40px;
-    box-shadow: 1px 10px 7px 5px rgb(169, 150, 186);
+    width: flex;
+    box-shadow: 1px 10px 7px 5px rgb(32, 146, 0);
 }
 
 .backgroun-image-head h5 {
     margin-top: 0px;
-    color: rgb(132, 83, 181);
+    color: #f44336;
     font-size: 20px;
     text-align: center;
     border-radius: 10px;
@@ -904,13 +1002,18 @@ body {
     margin-top: 10px;
     font-size: 50px;
     text-align: center;
+  
+      color: rgb(210, 32, 118);
 }
 
 .backgroun-image-head h4 {
     margin-left: 30px;
     font-size: 25px;
     text-align: center;
+    color: #059817;
 }
+
+/* sign up -----------------------------------------------------------------------------------*/
 
 .input-head {
     margin: 80px;
@@ -920,15 +1023,16 @@ body {
     margin-top: 10px;
     padding: 3px;
     text-align: center;
-    color: rgb(216, 109, 52);
+  color: #f44336;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .input-head h3 {
     text-align: center;
     margin-top: 10px;
     font-size: 40px;
+    color: #0056b3;
 }
 
 .input-box {
@@ -947,27 +1051,29 @@ body {
     padding: 20px;
     font-size: 25px;
     margin-right: 20px;
-    background-color: rgb(76, 185, 185);
+    background-color: rgb(255, 96, 48);
+      border: none;
 
 }
 
 .input-box .btn2 {
     margin-top: 10px;
-    border-radius: 8px;
-    background-color: rgb(76, 185, 185);
+    border-radius: 10px;
+    background-color: rgb(62, 207, 49);
     font-size: 25px;
     padding: 20px;
+      border: none;
 }
 
 .input-box button {
     border: none;
     margin-left: 50px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 8px;
-    background-color: rgb(197, 191, 90);
+    background-color: rgb(3, 104, 255);
 }
 
 .input-box button:hover {
@@ -976,6 +1082,82 @@ body {
 
 
 }
+
+
+/* Small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .background-image {
+    margin-top: 30ch;
+    padding: 10px;
+    margin-left: 10px;
+    
+  }
+
+  .backgroun-image-head h2 {
+    font-size: 1.4rem;
+
+  }
+
+  .input-head h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn1, .btn2 {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 90%;
+  }
+}
+ 
+
+
+
+
+
+
+
+/* Medium devices (tablets, 576px to 767.98px) */
+ /* @media (min-width: 576px) and (max-width: 767.98px) {
+  .background-image {
+    padding: 30px;
+  }
+
+  .backgroun-image-head h2 {
+    font-size: 1.7rem;
+  }
+
+  .input-head h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn1, .btn2 {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+}   */
+
+/* Larger tablets and small desktops (768px to 991.98px) */
+/* @media (min-width: 768px) and (max-width: 991.98px) {
+  .background-image {
+    padding: 40px;
+  }
+
+  .btn1, .btn2, button {
+    width: 300px;
+  }
+}
+
+  */
+
+
+
+
 
 
 
@@ -1173,7 +1355,7 @@ body {
 @media (max-width:524px) {
 
     .input-box .btn1 , .input-box .btn2 {
-        width: 250px;
+        width: auto;
         font-size: 15px;
 
     }
@@ -1221,21 +1403,21 @@ body {
         padding: 10px;
     }
 }
-
-@media (max-width:410px) {
+/* ----------------------------------End-------------------------------------------------- */
+ /* @media (max-width:410px) { 
     .join-commu {
         margin-top: 140px;
         margin-left: 20px;
         
     }
-
+ 
     .join-commu h5 {
         font-size: 8px;
         margin: 15px 0px 0px;
         border: none;
-    }
+    } 
 
-    .join-commu h4 {
+.join-commu h4 {
         font-size: 4px;
         margin-top: 3px;
 
@@ -1245,32 +1427,32 @@ body {
     }
     .join-commu .link2{
         margin-top: 2px;
-    }
+    } 
 
-    .join-commu .link2 .a {
+.join-commu .link2 .a {
         font-size: 5px;
         padding: 5px 12px;
 
-    }
+    } 
 
     .join-commu .link1 .a {
         font-size: 5px;
         padding: 5px 7px;
 
-    }
+    } 
     .input-box{
         margin-left: 10px;
-    }
+    } 
     
-    .input-box .btn1 , .input-box .btn2 {
+     .input-box .btn1 , .input-box .btn2 {
         width: 220px;
         font-size: 15px;
 
-    }
-    .input-box button{
+    } 
+     .input-box button{
         font-size: 12px;
         margin-left: 45px;
         margin-top: 10px;
-    }
+    } 
 
-} 
+}    */
