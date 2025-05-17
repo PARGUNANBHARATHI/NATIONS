@@ -83,7 +83,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright Section */}
-                <div className="row mt-4 pt-3 border-top border-secondary">
+                <div className="row mt-3 pt-3 border-top border-secondary">
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         <h6 className="mb-0">
                             Copyright © Nation's First Trust - All Rights Reserved
