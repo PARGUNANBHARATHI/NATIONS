@@ -173,6 +173,7 @@ body {
 /* ---------------Slide Mobile adjustments-----------  */ 
 
 @media (max-width: 768px) {
+  
   .slider-container {
      margin-top: 0%;
     height: 52vh;
@@ -249,14 +250,100 @@ body {
   }
 }
 
+@media (min-width: 350px) and (max-width: 575px){
+
+
+.slider-container {
+
+    height: 46vh;
+    max-height: 500px;
+
+  }
+
+  .slide {
+    background-size: contain;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+
+  .left-arrow,
+  .right-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left-arrow {
+    left: 15px;
+  }
+
+  .right-arrow {
+    right: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+@media (min-width: 400px) and (max-width: 550px) {
+
+
+.slider-container {
+
+    height: 33vh;
+    max-height: 500px;
+
+  }
+
+  .slide {
+    background-size: contain;
+    background-color: #ffffff; /* Add background color for empty space */
+  }
+
+  .left-arrow,
+  .right-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left-arrow {
+    left: 15px;
+  }
+
+  .right-arrow {
+    right: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+
+}
+
+
+
+}
 
 
 
 
 /* Tablet Responsiveness */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .slider-container {
-    /* height: 33ch; */
+     height: 32ch; 
     width: auto;
 
   
@@ -514,12 +601,14 @@ body {
     .custom-image-container img {
       width: 100%;
       height: auto;
+      margin-left: 10px;
     }
   }
   
   /* XL: ≥1200px */
   @media (min-width: 1200px) and (max-width: 1399.98px) {
     .custom-image-container img {
+      margin-left: 10vh;
       width: 100%;
       height: auto;
     }
@@ -560,7 +649,10 @@ body {
 
 
 /* ---------------------------------small screes  */
-@media (max-width: 575.98px) {
+
+@media (min-width: 350px) and (max-width: 575px){
+
+
 .image-flex-container {
 
   display: flex;
@@ -572,7 +664,7 @@ body {
 }
 
 .responsive-image {
-
+   
   width: 100%;
   max-width: 100%; /* 24rem */
   border-radius: 12px;
@@ -585,44 +677,7 @@ body {
   transform: scale(1.04);
 }
 
-
-
-
-
-
 }
-
-
-/* Mobile phones (up to 599px)------------------------------------------------- */
-@media (max-width: 599px) {
-
-
-
-
-
-
-
-
-
-}
-
-/* Tablets (576px to 767.98px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-
-
-
-
-
-}
-
-/* Devices above 600px (optional general rule for medium+ screens) */
-@media (min-width: 600px) {
-
-
-}
-
-
 
 
 
@@ -768,7 +823,7 @@ body {
 }
 
 .heartbeat {
-  animation: heartbeat 5.5s infinite;
+  animation: heartbeat 15.5s infinite;
   transform-origin: center;
 }
 
@@ -776,11 +831,11 @@ body {
   bottom: 0%;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #f72b2b;
+   color: #ff00c8;
   background-color:white;
   padding: 15px 25px;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
   max-width: 900px;
   margin-left: 500px;
@@ -892,7 +947,7 @@ padding: 10%;
     font-size: 15px;
     height: 10%;
     padding: 4px 10px;
-    margin-left: 7ch;
+    margin-left: 10ch;
   }
 
   .btn-custom-success {
@@ -903,8 +958,8 @@ padding: 10%;
     font-size: 15px;
     height: 10%;
     padding: 4px 10px;
-    margin-top: 60ch;
-    margin-left: 7ch;
+    margin-top: 25ch;
+    margin-left: 10ch;
   }
 }
 
@@ -937,21 +992,66 @@ padding: 10%;
         margin-top: 50ch;
   }
 }  
-
+/* cantainer description=================================== */
 
 @media (max-width: 599px) {
   .container2-discription {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     padding: 15px 4px;
-    margin-top: 60px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
     color: #ffffff;
     max-width: 80%;
     text-align: center;
-    background: #ff5100;
+    background: #fd915f;
    box-shadow: 0 5px 12px rgba(64, 252, 7, 0.08); 
+  }
+
+}
+
+@media (min-width:600px) and (max-width: 767.98px){
+
+
+  .container2-discription {
+    font-size: 1.0rem;
+    padding: 10px 4px;
+    margin-top: 0px;
+  
+    margin-left: 50px;
+    border-radius: 8px;
+
+    max-width: 80%;
+
+;
+   box-shadow: 0 5px 12px rgba(64, 252, 7, 0.08); 
+  }
+
+
+
+.btn-custom-primary {
+   
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 4px 10px;
+    margin-left: 20ch;
+  }
+
+  .btn-custom-success {
+  margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 6px 10px;
+    margin-left: 20ch;
+        margin-top: 41ch;
   }
 
 
@@ -963,10 +1063,84 @@ padding: 10%;
 
 
 
+@media (min-width: 768px) and (max-width: 1024px){
+    .container2-discription {
+    font-size: 1.2rem;
+    padding: 14px 4px;
+    margin-top: 10px;
+    margin-right: 30px;
+   color: #ff00c8;
+    max-width: 100%;
+
+  }
+  .btn-custom-primary {
+   
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 4px 10px;
+    margin-left: 7ch;
+  }
+
+  .btn-custom-success {
+  margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 6px 10px;
+    margin-left: 7ch;
+        margin-top: 40ch;
+  }
+
+
+}
+
+ @media (min-width: 1000px) and (max-width: 1399.98px){
+
+
+    .container2-discription {
+    font-size: 1.2rem;
+    padding: 14px 4px;
+    margin-top: 60px;
+    margin-right: 30px;
+    color: #ff00c8;
+    max-width: 100%;
+
+  }
+  .btn-custom-primary {
+   
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 6px 10px;
+    margin-left: 7ch;
+  }
+
+  .btn-custom-success {
+  margin-right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 10%;
+    padding: 6px 10px;
+    margin-left: 7ch;
+        margin-top: 40ch;
+  }
 
 
 
 
+
+ }
 
 
 
@@ -974,10 +1148,9 @@ padding: 10%;
 /* testimonials ---------------------------------------------------------------------*/
 
 
-  
 
 .background-image {
-  margin-top: 100px;
+  margin-top: 120px;
       background-image: url("/images/testimonials.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1048,7 +1221,115 @@ padding: 10%;
 
 .input-box .btn1 {
     border-radius: 10px;
-    padding: 20px;
+    padding: 5px;
+    font-size: 25px;
+    margin-right: 30px;
+    background-color: rgb(255, 96, 48);
+      border: none;
+
+}
+
+.input-box .btn2 {
+    margin-top: 10px;
+      margin-right: 30px;
+    border-radius: 10px;
+    background-color: rgb(62, 207, 49);
+    font-size: 25px;
+    padding: 5px;
+      border: none;
+
+}
+
+.input-box button {
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 5px;
+    font-size: 25px;
+    border-radius: 8px;
+    background-color: rgb(3, 104, 255);
+    margin-right: 50px;
+}
+
+.input-box button:hover {
+    background-color: rgb(10, 245, 30);
+
+
+
+}
+
+/* screen responsive ========================= */
+
+@media (min-width: 350px) and (max-width: 667px){
+
+
+.background-image {
+  margin-top: 100px;
+    line-height: 40px;
+    width: flex;
+    box-shadow: 1px 10px 7px 5px rgb(32, 146, 0);
+}
+
+.backgroun-image-head h5 {
+    margin-top: 0px;
+    color: #f44336;
+    font-size: 25px;
+
+    border-radius: 10px;
+   
+}
+
+.backgroun-image-head h2 {
+    margin-top: 50px;
+    font-size: 50px;
+   
+  
+      color: rgb(210, 32, 118);
+}
+
+.backgroun-image-head h4 {
+    margin-left: 30px;
+    font-size: 50px;
+    text-align: center;
+    color: #059817;
+}
+
+/* sign up --------------------------*/
+
+.input-head {
+    margin: 10px;
+}
+
+.input-head h6 {
+    margin-top: 10px;
+    padding: 1px;
+    text-align: center; 
+     color: #f44336;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.input-head h3 {
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 40px;
+    color: #0056b3;
+}
+
+.input-box {
+    display: flex;
+    border-radius: 30px;
+     justify-content: center; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+
+}
+
+.input-box .btn1 {
+    border-radius: 10px;
+    padding: 20px ;
     font-size: 25px;
     margin-right: 20px;
     background-color: rgb(255, 96, 48);
@@ -1066,14 +1347,15 @@ padding: 10%;
 }
 
 .input-box button {
-    border: none;
-    margin-left: 50px;
+
+
     cursor: pointer;
     margin-top: 25px;
-    padding: 20px;
+    padding: 25px ;
     font-size: 25px;
     border-radius: 8px;
     background-color: rgb(3, 104, 255);
+
 }
 
 .input-box button:hover {
@@ -1084,12 +1366,147 @@ padding: 10%;
 }
 
 
+
+
+
+}
+@media (min-width:600px) and (max-width: 767.98px){
+
+
+
+.input-head {
+    margin: 10px;
+}
+
+.input-head h6 {
+    margin-top: 10px;
+    padding: 1px;
+    text-align: center; 
+     color: #f44336;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.input-head h3 {
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 40px;
+    color: #0056b3;
+}
+
+.input-box {
+    display: flex;
+    border-radius: 30px;
+     justify-content: center; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+
+}
+
+.input-box .btn1 {
+    border-radius: 10px;
+    padding: 15px ;
+    font-size: 25px;
+    margin-right: 20px;
+    background-color: rgb(255, 96, 48);
+      border: none;
+
+}
+
+.input-box .btn2 {
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(62, 207, 49);
+    font-size: 25px;
+    padding: 15px;
+      border: none;
+}
+
+.input-box button {
+
+
+    cursor: pointer;
+    margin-top: 25px;
+    padding: 25px ;
+    font-size: 25px;
+    border-radius: 8px;
+    background-color: rgb(3, 104, 255);
+
+}
+
+.input-box button:hover {
+    background-color: rgb(10, 245, 30);
+
+
+
+}
+
+.background-image {
+  margin-top: 160px;
+    line-height: 40px;
+    width: flex;
+    box-shadow: 1px 10px 7px 5px rgb(32, 146, 0);
+}
+
+.backgroun-image-head h5 {
+    margin-top: 0px;
+    color: #f44336;
+    font-size: 25px;
+
+    border-radius: 10px;
+   
+}
+
+.backgroun-image-head h2 {
+    margin-top: 50px;
+    font-size: 50px;
+   
+  
+      color: rgb(210, 32, 118);
+}
+
+.backgroun-image-head h4 {
+    margin-left: 30px;
+    font-size: 50px;
+    text-align: center;
+    color: #059817;
+}
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Small devices (phones, <576px) */
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
   .background-image {
-    margin-top: 30ch;
+    margin-top: 10ch;
     padding: 10px;
-    margin-left: 10px;
+
+    width: auto;
     
   }
 
@@ -1100,6 +1517,7 @@ padding: 10%;
 
   .input-head h3 {
     font-size: 1.1rem;
+    margin-left: 10px;
   }
 
   .btn1, .btn2 {
@@ -1111,7 +1529,7 @@ padding: 10%;
     width: 90%;
   }
 }
- 
+  */
 
 
 
@@ -1120,7 +1538,7 @@ padding: 10%;
 
 
 /* Medium devices (tablets, 576px to 767.98px) */
- /* @media (min-width: 576px) and (max-width: 767.98px) {
+  @media (min-width: 576px) and (max-width: 767.98px) {
   .background-image {
     padding: 30px;
   }
@@ -1134,26 +1552,26 @@ padding: 10%;
   }
 
   .btn1, .btn2 {
-    width: 80%;
+    width: auto;
   }
 
   button {
     width: 80%;
   }
-}   */
+}   
 
 /* Larger tablets and small desktops (768px to 991.98px) */
-/* @media (min-width: 768px) and (max-width: 991.98px) {
+ @media (min-width: 768px) and (max-width: 991.98px) {
   .background-image {
     padding: 40px;
   }
 
   .btn1, .btn2, button {
-    width: 300px;
+    width: auto;
   }
 }
 
-  */
+  
 
 
 
@@ -1173,8 +1591,17 @@ padding: 10%;
     .join-commu h4{
         font-size: 16px;
     }
+      .background-image {
+        
+    padding: 40px;
+  }
 
+  .btn1, .btn2, button {
+    width: auto;
+  }
 }
+
+
 
 @media (max-width:1142px) {
     .input-head h3 {

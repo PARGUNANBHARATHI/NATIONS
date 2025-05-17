@@ -228,7 +228,7 @@ function Home() {
 
 
    <div className="container2-discription ">Your kindness can spark a change,
-a small gift can lift a life.<br></br>
+a small gift can lift a life.
 Donate today, inspire tomorrow.</div>
 
 
@@ -251,7 +251,7 @@ Donate today, inspire tomorrow.</div>
 
 
       
-      <div className="background-image mt-6">
+      <div className="background-image mt-7">
         <div className="backgroun-image-head mt-0">
           <h5>Testimonials</h5>
           <h2>Empowering Lives, Enriching Futures</h2>
@@ -266,7 +266,7 @@ Donate today, inspire tomorrow.</div>
 
       <div className="input-box">
         <form onSubmit={onsubmit} autoComplete='off'>
-          <input className='btn1' type="text" placeholder='Enter Name' value={name}
+          <input className='btn1 ' type="text" placeholder='Enter Name' value={name}
             onChange={((e) => (setname(e.target.value)))} />
 
           <input className="btn2" type='Email' placeholder='Enter Email' value={email}

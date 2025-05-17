@@ -227,7 +227,7 @@ body {
   
   .navbar {
     flex-wrap: wrap;
-    padding:4px;
+    padding:3px;
   }
   
   .logo img {
@@ -239,7 +239,7 @@ body {
   .title {
      text-align: center; 
      /* margin-left: 30px;  */
-      margin-right: 10px;  
+      margin-right: 1vh;  
     flex: 1 0 60%;
   }
 
@@ -282,6 +282,12 @@ body {
     height: 80px;
   }
 
+
+
+
+
+
+
   .title h4,
   .title p,
   .title .a {
@@ -315,15 +321,13 @@ body {
   }
 
   .title h4{
-    display: flex;
        font-size: 20px;
-          margin-left: 65px;  
- 
+       margin-right: 10px;  
   }
   .title p,
   .title .a {
     font-size: 20px;
-     margin-right: 110px; 
+     margin-right: 10px; 
 
   }
   
