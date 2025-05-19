@@ -5,29 +5,29 @@ import "../footer/footer.css";
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-3">
+        <footer className="bg-dark text-white py-1 px-5">
             <div className="container">
-                <div className="row g-4"> {/* Added gutter spacing */}
+                <div className="row g-5"> {/* Added gutter spacing */}
                     {/* Information Column */}
                     <div className="col-md-6 col-lg-3">
                         <h4 className="text-warning mb-3">Information</h4>
                         <ul className="list-unstyled">
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to='/About' className="text-white text-decoration-none hover-gold">About Us</Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to='/Mission' className="text-white text-decoration-none hover-gold">Mission & Vision</Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to="/Project" className="text-white text-decoration-none hover-gold">Project</Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to='/Events' className="text-white text-decoration-none hover-gold">Events</Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to="/Become a volunteer" className="text-white text-decoration-none hover-gold">Become a Volunteer</Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="mb-1">
                                 <Link to='/Donation' className="text-white text-decoration-none hover-gold">Donate Now</Link>
                             </li>
                         </ul>
@@ -35,13 +35,13 @@ const Footer = () => {
 
                     {/* Contact Column */}
                     <div className="col-md-6 col-lg-5">
-                        <h4 className="text-warning mb-3">Contact Information</h4>
+                        <h4 className="text-warning mb-1">Contact Information</h4>
                         <div className="contact-info">
-                            <p className="mb-2 d-flex align-items-center">
+                            <p className="mb-1 d-flex align-items-center">
                                 <FaPhone className="me-2 text-warning" />
                                 <span>Call us: 04179-295781</span>
                             </p>
-                            <p className="mb-2 d-flex align-items-center">
+                            <p className="mb-1 d-flex align-items-center">
                                 <FaMobileAlt className="me-2 text-warning" />
                                 <span>Mobile: +91-7598378989</span>
                             </p>
@@ -49,7 +49,7 @@ const Footer = () => {
                                 <FaEnvelope className="me-2 text-warning" />
                                 <span>Email: nft.rss.ind@gmail.com</span>
                             </p>
-                            <p className="mb-3 d-flex align-items-center">
+                            <p className="mb-2 d-flex align-items-center">
                                 <FaGlobe className="me-2 text-warning" />
                                 <span>Website: www.nationsfirsttrust.com</span>
                             </p>
