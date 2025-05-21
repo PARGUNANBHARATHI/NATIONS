@@ -1,218 +1,118 @@
-
-
-
-
-
-
 .volunteerImages {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+
 }
 
 .volunteerImages img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
 }
 
 .volunteer-head {
-    margin-top: 5px;
-    text-align: center;
-    color: orange;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #c36212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px 0;
 }
 
 .volunteer {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 20px;
 }
 
-.volunteer .volunteer-questions {
-    border-radius: 20px;
-    padding: 40px;
-    border: 2px solid #f57c00;
-    background: #fffde7;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) ;
-    transition: all 0.3s ease;
+.volunteer-questions,
+.volunteerForm {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
-.volunteer-questions h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #f57c00;
-    padding-bottom: 10px;
-
+.volunteer-questions h2,
+.volunteerForm h2 {
+  color: #444;
+  margin-bottom: 15px;
 }
 
 .volunteer-questions h3 {
-    font-size: 1.5rem;
-    color: black;
-    border: 2px solid white;
-    background-color: #fffde7;
-    padding: 20px;
-    border-left: 6px solid #f57c00;
-    margin-bottom: 20px;
-    font-family: 'Courier New', Courier, monospace;
+  color: #c36212;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .volunteer-questions p {
-    background-color: #fffde7;
-    color: black;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-weight: 500;
-    margin-top: 20px;
-    font-size: 1rem;
-    line-height: 1.6;
-    border-left: 5px solid #f57c00;
-   
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-.volunteerForm {
-    background-color: rgb(15, 218, 218);
-    border: 2px solid;
-    border-color: rgb(15, 218, 218); ;
-    
-
-    border-radius: 10px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    max-width: 400px;
-
-}
-
-.volunteerForm h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 27px;
-    color: #f0ead6;
-    margin-bottom: 25px;
+.volunteerForm form {
+  display: flex;
+  flex-direction: column;
 }
 
 .volunteerForm label {
-    font-size: large;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
 }
 
-.volunteerForm input {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc; 
+.volunteerForm input,
+.volunteerForm textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.volunteerForm input:focus,
+.volunteerForm textarea:focus {
+  border-color: #c36212;
 }
 
 .volunteerForm textarea {
-    display: flex;
-    font-size: 17px;
-    margin-left: 20px;
-    height: 50px;
-    outline: auto;
+  resize: vertical;
+  min-height: 100px;
 }
 
 .volunteerForm button {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #c36212;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .volunteerForm button:hover {
-    background: color #45a049;;
-
+  background-color: #a94f0d;
 }
 
-@media(max-width:1000px) {
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .volunteer {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .valunteerImages {
-        width: 100%;
-    }
+  .volunteer-questions,
+  .volunteerForm {
+    width: 100%;
+    max-width: 100%;
+  }
 
-
-    .volunteer {
-        margin-top: 200px;
-    }
-}
-
-
-@media(max-width:950px) {
-
-
-    .volunteer-head {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width:610px) {
-
-
-    .volunteer-questions h2 {
-        font-size: large;
-
-    }
-
-    .volunteer-questions h3 {
-        font-size: 14px;
-
-    }
-
-    .volunteer-questions p {
-        font-size: 14px;
-    }
-
-    .volunteerForm h2 {
-        font-size: 20px;
-    }
-
-    .volunteerForm label {
-        font-size: 12px;
-    }
-
-    .volunteerForm input {
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    .volunteerForm button {
-        font-size: 17px;
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-
-    .volunteerForm textarea {
-
-        font-size: 17px;
-        margin-left: 20px;
-        height: 100px;
-    }
-
-}
-
-@media(max-width:441px) {
-
-    .volunteer .volunteer-questions {
-        padding: 10px;
-    }
-
-    .volunteer-head {
-        font-size: 12px;
-    }
-
-    .volunteerImages h1 {
-        font-size: 30px;
-        margin-top: 30px;
-    }
-
+  .volunteer-head {
+    font-size: 1.8rem;
+  }
 }

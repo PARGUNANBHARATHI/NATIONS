@@ -1,94 +1,132 @@
-import React, { useState } from 'react'
-import axios from "axios"
-import "./Volunteer.css"
+import React, { useState } from 'react';
+import axios from "axios";
+import "./Volunteer.css";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Volunteer = () => {
-
-    const [data, setdata] = useState({
+    const [data, setData] = useState({
         name: "",
         email: "",
         mobile: "",
         city: "",
         message: ""
-    })
-    const submitForm = async (e)=>{
-        e.preventDefault()
-        const {name,email,mobile,city,message} = data
-        
-        try{
-            if(!name || !email || !mobile || !city || !message){
-                 return toast.warning("Must fill the all table")
-            }
+    });
 
-            const {data} = await axios.post("https://nft1-backend.onrender.com/become-volunteer",{
-                name,email,mobile,city,message
-                
-            })
-            if(data.error){
-                return toast.error(data.error)
-            }
-            else{
-                setdata({})
-                 toast.success("Successful Submited")
-            }
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value });
+    };
 
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        const { name, email, mobile, city, message } = data;
+
+        if (!name || !email || !mobile || !city || !message) {
+            return toast.warning("Please fill out all fields.");
         }
-        catch(error){
-                 console.log(`Error: ${error}`)
+
+        try {
+            const response = await axios.post("https://nft1-backend.onrender.com/become-volunteer", {
+                name,
+                email,
+                mobile,
+                city,
+                message
+            });
+
+            if (response.data.error) {
+                toast.error(response.data.error);
+            } else {
+                toast.success("Successfully Submitted!");
+                setData({
+                    name: "",
+                    email: "",
+                    mobile: "",
+                    city: "",
+                    message: ""
+                });
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            toast.error("Something went wrong. Please try again.");
         }
-    }
+    };
+
     return (
         <>
-        <ToastContainer/>
+            <ToastContainer />
             <div className="volunteerImages">
-                <img src='images/volunteer.svg' alt='images'></img>
-                
-             </div>
-             <h1 className='volunteer-head'> Volunteer</h1>
+                <img src='images/volunteer.svg' alt='Volunteer' />
+            </div>
+
+            <h1 className='volunteer-head'>Volunteer</h1>
 
             <div className="volunteer">
                 <div className="volunteer-questions">
                     <h2>Frequently Asked Questions</h2>
-                     <h3>How to become a volunteer?</h3>
-                     <p>Kindly fill out the ‘volunteer form’ available
-                       on this page.<br></br> Thereafter our team will assist you further.</p>
-                     <h3>How much time do I have to devote as a volunteer?</h3>
-                     <p>We always welcome</p>
-
+                    <h3>How to become a volunteer?</h3>
+                    <p>
+                        Kindly fill out the ‘volunteer form’ available on this page.
+                        <br /> Thereafter our team will assist you further.
+                    </p>
+                    <h3>How much time do I have to devote as a volunteer?</h3>
+                    <p>We always welcome contributions of any size or schedule!</p>
                 </div>
+
                 <div className="volunteerForm">
                     <h2>Fill the Volunteer Form</h2>
                     <form onSubmit={submitForm}>
                         <label>Your Name:</label>
-                        <input type='text' value={data.name || ""}
-                            onChange={((e) => setdata({ ...data, name: e.target.value }))} ></input>
+                        <input
+                            type='text'
+                            name='name'
+                            value={data.name}
+                            onChange={handleChange}
+                            required
+                        />
 
                         <label>Your Email:</label>
-                        <input type='email' value={data.email || ""}
-                            onChange={((e) => setdata({ ...data, email: e.target.value }))}></input>
+                        <input
+                            type='email'
+                            name='email'
+                            value={data.email}
+                            onChange={handleChange}
+                            required
+                        />
 
                         <label>Your Mobile:</label>
-                        <input type='number' value={data.mobile || ""}
-                            onChange={((e) => setdata({ ...data, mobile: e.target.value }))}></input>
+                        <input
+                            type='tel'
+                            name='mobile'
+                            value={data.mobile}
+                            onChange={handleChange}
+                            required
+                        />
 
                         <label>Your City:</label>
-                        <input type='city' value={data.city || ""}
-                            onChange={((e) => setdata({ ...data, city: e.target.value }))}></input>
+                        <input
+                            type='text'
+                            name='city'
+                            value={data.city}
+                            onChange={handleChange}
+                            required
+                        />
 
                         <label>Message:</label>
-                        <textarea type='message' value={data.message || ""}
-                            onChange={((e) => setdata({ ...data, message: e.target.value }))}></textarea>
+                        <textarea
+                            name='message'
+                            value={data.message}
+                            onChange={handleChange}
+                            required
+                        ></textarea>
 
-                        <button onClick={submitForm} >Submit Form</button>
+                        <button type='submit'>Submit Form</button>
                     </form>
-
-
-
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Volunteer
+export default Volunteer;
