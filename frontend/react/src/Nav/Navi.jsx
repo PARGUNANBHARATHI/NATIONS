@@ -49,7 +49,7 @@ TRACE EVERY CATCH 🦀🦀🦀
                 <li><NavLink to="/Home">Home</NavLink></li>
               <li><NavLink to="/Product">Products</NavLink></li>
                  <li><NavLink to="/Track">Track</NavLink></li>
-
+   <li><NavLink to="/Seafood">Bolg</NavLink></li>
             <li className="dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
