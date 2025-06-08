@@ -1,282 +1,129 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from "react-router-dom"
-import axios from "axios"
-import { ToastContainer, toast } from "react-toastify";
-import "./Home.css"
+import React from 'react';
+import frezivaImage from "/images/sea5.jpg"; // Check if the image path is valid
+import './Home.css'; // Link to the CSS styles below
 
-function Home() {
-  const slides = [
-    { url: 'images/slide0.svg' },
-    { url: 'images/slide1.svg' },
-    { url: 'images/slide2.svg' },
-    { url: 'images/slide3.svg' },
-    { url: 'images/slide4.svg' },
-    { url: 'images/slide5.svg' }
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-
-  const onsubmit = async (e) => {
-    e.preventDefault();
-
-    if (!name || !email) {
-      return toast.warning("Must required name and email");
-    }
-
-    try {
-      const { data } = await axios.post("https://nft1-backend.onrender.com/data", { name, email });
-
-      if (data.error) {
-        return toast.error(data.error);
-      }
-      else {
-        setemail("");
-        setname("");
-        toast.success("Successfuly submit");
-      }
-
-    }
-
-    catch (error) {
-      console.log(error);
-    }
-
-
-  };
+const Home = () => {
   return (
+    <div className="home-wrapper container py-5">
 
-    <div>
-      <ToastContainer />
-      <div className="slides">
+      {/* Hero Section */}
+      <div className="row align-items-center mb-5">
+        <div className="col-12 text-center">
+          <img
+            src={frezivaImage}
+            alt="Freziva brand"
+            className="img-fluid rounded shadow hero-image"
+            loading="lazy"
+          />
+          <h1 className="display-5 fw-bold mt-4 text-primary">Welcome to FREZIVA</h1>
+          <p className="lead text-muted">Empowering change through innovation, culture & community.</p>
+          <a href="#about" className="btn btn-primary px-4 py-2 mt-3">Discover More</a>
+        </div>
+      </div>
 
-        <div className="slider-container mt-0">
-          <div className="slider">
-            <div className="slides-container"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-                <div
-                  className="slide"
-                  key={index}
-                  style={{ backgroundImage: `url(${slide.url})` }}
-
-                ></div>
-              ))}
-            </div>
-          </div>
-
-          {/* Left Arrow */}
-          <div className="left-arrow" onClick={goToPrevious}>&#10094;</div>
-
-          {/* Right Arrow */}
-          <div className="right-arrow" onClick={goToNext}>&#10095;</div>
-
-          {/* Dots Indicator */}
-          <div className="dots-container">
-            {slides.map((_slide, slideIndex) => (
-              <div
-                className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
-              ></div>
+      {/* About Section */}
+      <div id="about" className="row">
+        <div className="col-lg-9 mx-auto freziva-content">
+          <h2 className="text-center fw-bold mb-4 text-primary">ABOUT FREZIVA</h2>
+          <div className="freziva-paragraphs">
+            {[
+              "Freziva is more than just a brand—it's a movement that celebrates innovation, creativity, and community-driven progress. Our mission is to bridge the gap between tradition and technology while nurturing local talents and empowering individuals.",
+              "Built on the values of trust, transparency, and transformation, Freziva aims to become a catalyst for change across various sectors including education, environment, culture, and technology. We believe that real impact starts at the grassroots level, and every effort—no matter how small—contributes to a brighter, more sustainable future.",
+              "At Freziva, we foster an ecosystem of collaboration where ideas flourish, individuals grow, and communities thrive. Join us on this journey as we strive to make meaningful change, one step at a time."
+            ].map((paragraph, index) => (
+              <p key={index}>
+                <span>•</span>{paragraph}
+              </p>
             ))}
           </div>
         </div>
-      </div>
+              {/* key future  Section */}
+         
+           <div className="container py-5">
+  <h2 className="text-center mb-5 fw-bold">Key Features</h2> 
+   </div>
+    <div className="container py-5">
+      <div className="row g-4">
+        <div className="col-md-6 col-lg-3">
+          <div className="p-4 shadow-sm border rounded text-center">
+            <img src="/images/sea2.jpg" alt="Sea Food Track" width="50" className="mb-3" />
+            <h5>Sea Food Tracking</h5>
+            <p>
+              Monitor and record your Sea Food Tracking activities with ease, ensuring accurate data for better decision-making.
+            </p>
+          </div>
+        </div>
 
-
-
-      <div className="container my-5 mt-0">
-  <div className="row align-items-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div className="container my-5 mt-2">
-  <div className="row align-items-center ">
-    {/* Paragraph Container (Left Side) */}
-    <div className="col-lg-7 mb-0 ">
-      <h2 className="heading mb-0 ms-1 ">Who We Are</h2>
-      
-      <div className="intro-text ms-1  ">
-        <p>
-          Nation's First Trust (NFT) is dedicated to transforming Bharat into a developed nation.
-          We aim to build a foundation of trust by focusing on sustainable growth, community empowerment, and innovation.
-          Our initiatives are designed to enhance social welfare.
-        </p>
-      </div>
-
-      <div className="vision-text ms-1 ">
-        <p>
-          Bharat, a land of rich heritage and immense potential, stands at the cusp of a new era.
-          With its vibrant culture, diverse traditions, and strong values, it has long been a guiding light of selfless service
-          and cultural strength. NFT envisions harnessing this strength to build a self-reliant and progressive nation.
-        </p>
-      </div>
-
-      <div className="mission-text ms-1">
-        <p>
-          NATION'S FIRST TRUST is a registered Charitable Trust. NFT perceives its role as a catalyst in revitalizing cultural sensitivity,
-          bridging tradition and modernity in today’s world.
-        </p>
-      </div>
-      
-      <h5 className="signature mt-0 text-end">- Nation's First Trust</h5>
-    </div>
-
-    {/* Image Container (Right Side) */}
-    <div className="col-lg-5 text-center">
-  <div className="custom-image-container mt-5">
-    <img
-      src="images/homein.png"
-      alt="Who We Are"
-      className="img-fluid rounded shadow"
-    />
-  </div>
-</div>
-  </div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="container1 ">
-        
-        <div className='join-commu mt-20'>       
-<div className="d-flex flex-column justify-content-center   gap-4">
-
-<Link className="btn-custom btn-custom-success heartbeat" to="/Donation">
-  Make a Donation🤍
-</Link>
-<Link className="btn-custom btn-custom-primary heartbeat" to="/Volunteer">
-  Become a Volunteer
-</Link>
+        </div> 
+        </div>
  
-</div>
+
+ <div className="col-md-6 col-lg-3">
+          <div className="p-4 shadow-sm border rounded text-center">
+            <img src="/images/track.jpg" alt="Delivery" width="50" className="mb-3" />
+            <h5>Delivery Management</h5>
+            <p>
+              Streamline your delivery processes, ensuring timely and efficient transportation of your farm products.
+            </p>
+          </div>
         </div>
 
-
-<div className="image-flex-container me-10">
-  <img
-    src="/images/homejoin.svg"
-    alt="Join Us Illustration"
-    className="responsive-image"
-  />
-</div>
-
-      </div>
-
-
-
-
-
-   <div className="container2-discription ">Your kindness can spark a change,
-a small gift can lift a life.
-Donate today, inspire tomorrow.</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* testimonials ---------------------------------------------------------------------*/}
-
-
-
-      
-      <div className="background-image mt-7">
-        <div className="backgroun-image-head mt-0">
-          <h5>Testimonials</h5>
-          <h2>Empowering Lives, Enriching Futures</h2>
-          <h4>Building a brighter future, together.</h4>
+        <div className="col-md-6 col-lg-3">
+          <div className="p-4 shadow-sm border rounded text-center">
+            <img src="/images/sea3.jpg" alt="Inventory" width="50" className="mb-5" />
+            <h5>Inventory Management</h5>
+            <p>
+              Keep track of your inventory levels in real-time, ensuring optimal stock levels at all times.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="input-head ">
-        <h6>Join Us</h6>
-        <h3>Sign up to hear from us about our new activities.</h3>
-      </div>
-
-      <div className="input-box">
-        <form onSubmit={onsubmit} autoComplete='off'>
-          <input className='btn1 ' type="text" placeholder='Enter Name' value={name}
-            onChange={((e) => (setname(e.target.value)))} />
-
-          <input className="btn2" type='Email' placeholder='Enter Email' value={email}
-            onChange={((e) => (setemail(e.target.value)))} />
-
-          <button onClick={onsubmit}>SUBMIT</button>
-        </form>
+        <div className="col-md-6 col-lg-3">
+          <div className="p-4 shadow-sm border rounded text-center">
+            <img src="/images/OIP.jpg" alt="Blockchain" width="50" className="mb-4" />
+            <h5>Transparency via Blockchain</h5>
+            <p>
+              Ensure transparency in your farm operations using blockchain technology for secure record-keeping.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  );
-}
 
-export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  );
+};
+
+export default Home;

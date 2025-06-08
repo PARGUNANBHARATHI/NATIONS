@@ -16,43 +16,40 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ffffff;
+   background-color: #202423; 
   z-index: 1050;
-  box-shadow: 0 2px 5px rgb(3, 172, 26);
+  /* box-shadow: 0 2px 5px rgb(5, 248, 228); */
   display: flex;
   align-items: center;
-  padding: 2px 5px;
+  padding: 2px 6px;
+
+
 }
+
 
 /* Logo */
 .logo img {
-  height: 140px;
+  
+  height: 150px;
   width: auto;
   animation: rotateClockwise 4.5s linear infinite;
-}
-
-@keyframes rotateClockwise {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+  
 }
 
 /* Title */
 .title {
   flex: 1;
   text-align: center;
-  color: #ff9500;
-  margin-right: 20px;
+  color: #ffffff;
+  margin-right: 18px;
   line-height: normal;
 }
 
+
 .title h4 {
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 0px;
-  color: #ff9500;
+  color: #f0efef;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
   white-space: nowrap;
@@ -70,11 +67,10 @@ body {
 }
 
 .title .a {
-  color: #ff9500;
+  color: #ffffff;
   font-weight: bold;
-  border-bottom-style: dotted;
-  border-color: rgb(251, 6, 198);
-  font-size: 20px;
+ 
+  font-size: 36px;
   text-decoration: none;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -82,7 +78,7 @@ body {
 .title p {
   margin-top: 10px;
   line-height: normal;
-  font-size: 20px;
+  font-size: 15px;
   color: green;
   font-weight: bold;
 }
@@ -92,7 +88,7 @@ body {
   list-style: none;
   display: flex;
   margin-right: 50px;
-  color: #0063c0;
+  color: #ffffff;
 }
 
 .nav-link li {
@@ -109,15 +105,15 @@ body {
 
 .nav-link a {
   text-decoration: none;
-  color: #0063c0;
+  color: #ffffff;
   font-weight: 500;
 }
 
 .nav-link a:hover,
 .nav-link a.active {
-  color: #ff8800;
+  color: #eceed9;
   font-weight: bold;
-  border-bottom: 1px dotted #e203b2;
+  border-bottom: 1px dotted #ff1606;
 }
 
 /* Dropdown */
@@ -220,7 +216,7 @@ body {
 
 
 /* Extra small devices (phones, 320px and up) */
-@media (min-width: 340px) and  (max-width: 575.98px) {
+@media (min-width: 340px) and  (max-width: 575px) {
   body {
     padding-top: 0px;
   }
@@ -258,13 +254,8 @@ body {
   display: flex; /* Use flex for better layout control */
   order: 1;
   color: #f60606;
-  margin-right: 0;
-  flex-wrap: wrap;
-  gap: 10px; /* space between icons */
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  font-size: 1.2rem;
+  font-size: 16PX;
+
 }
 
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import logo from "../assets/love.png";
+import logo from "../assets/love1.png";
 import { FaBars } from "react-icons/fa";
 import { GoChevronDown } from "react-icons/go";
 import "./Nav.css";
@@ -31,56 +31,56 @@ const Navi = () => {
         </div>
 
         <div className='title'>
-          <h4>தேசமே ! பிரதானம் !</h4>
-          <Link className='a' to='/'>NATION'S FIRST TRUST</Link>
-          <p>Service to Mankind</p>
+      
+          {<Link className='a' to='/Home'>FREZIVA</Link> }
+              { <h4>🦐
+🦐
+🦐
+FROM SEA TO SCREEN 
+TRACE EVERY CATCH 🦀🦀🦀
+
+</h4> }
+          
         </div>
 
         {/* Desktop Nav */}
         <div className='mobile-view'>
           <ul className='nav-link'>
-            <li><NavLink to='/' exact="true">Home</NavLink></li>
+                <li><NavLink to="/Home">Home</NavLink></li>
+              <li><NavLink to="/Product">Products</NavLink></li>
+                 <li><NavLink to="/Track">Track</NavLink></li>
+
             <li className="dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <p>About <GoChevronDown /></p>
+              {/* <p>About <GoChevronDown /></p> */}
               <div className="dropdown-content">
-                <Link className='a' to="/About">About Us</Link>
-                <Link className='a' to="/Board of trustees">Board of Trustees</Link>
-                <Link className='a' to="/Mission">Mission & Vision</Link>
-                <Link className='a' to="/Volunteer">Volunteer</Link>
+          
+             
               </div>
             </li>
-            <li><NavLink to="/Project">Project</NavLink></li>
-            <li><NavLink to="/Events">Events</NavLink></li>
-            <li><NavLink to="/Gallery">Gallery</NavLink></li>
-            <li><NavLink to="/Contact">Contact</NavLink></li>
-            <Link className='dona' to="/Donation"><span>Donation 🤍</span></Link>
+            {/* {/* <li><NavLink to="/Project">Project</NavLink></li> */}
+      
           </ul>
         </div>
 
         {/* Sidebar for Mobile */}
         <div className={`mobile-views ${showSideBar ? 'active' : ''}`} ref={menuRef}>
           <ul className='nav-link'>
-            <li><NavLink to='/' onClick={handleNavClick}>Home</NavLink></li>
+            {/* <li><NavLink to='/' onClick={handleNavClick}>Home</NavLink></li> */}
             <li className="dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
               <p>About <GoChevronDown /></p>
               <div className="dropdown-content">
-                <Link className='a' to="/About" onClick={handleNavClick}>About Us</Link>
-                <Link className='a' to="/Board of trustees" onClick={handleNavClick}>Board of Trustees</Link>
-                <Link className='a' to="/Mission" onClick={handleNavClick}>Mission & Vision</Link>
-                <Link className='a' to="/Volunteer" onClick={handleNavClick}>Volunteer</Link>
+                {/* <Link className='a' to="/About" onClick={handleNavClick}>About Us</Link>
+               */}
               </div>
             </li>
-            <li><NavLink to="/Project" onClick={handleNavClick}>Project</NavLink></li>
-            <li><NavLink to="/Events" onClick={handleNavClick}>Events</NavLink></li>
-            <li><NavLink to="/Gallery" onClick={handleNavClick}>Gallery</NavLink></li>
-            <li><NavLink to="/Contact" onClick={handleNavClick}>Contact</NavLink></li>
-            <Link className='dona' to="/Donation" onClick={handleNavClick}><span>Donation 🤍</span></Link>
+            {/* <li><NavLink to="/Project" onClick={handleNavClick}>Project</NavLink></li>
+           */}
           </ul>
         </div>
 

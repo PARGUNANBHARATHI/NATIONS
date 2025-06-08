@@ -1,0 +1,111 @@
+/* Container */
+.track-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+
+/* Heading */
+.track-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.track-container p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+.track-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.track-form input {
+  padding: 0.7rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.track-form button {
+  padding: 0.7rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.track-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Icons section (optional if using separate icon row) */
+.tracking-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 1.5rem 0;
+}
+
+.tracking-icons img {
+  width: 50%;
+  height: auto;
+}
+
+/* Tracking info */
+.tracking-info {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.tracking-info h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Info item with image */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.info-item img {
+  width: 40%;
+  height: 40%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .track-form {
+    flex-direction: column;
+  }
+
+  .track-form input {
+    width: 100%;
+  }
+
+  .track-form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .info-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

@@ -13,23 +13,23 @@ const Footer = () => {
                         <h4 className="text-warning mb-3">Information</h4>
                         <ul className="list-unstyled">
                             <li className="mb-1">
-                                <Link to='/About' className="text-white text-decoration-none hover-gold">About Us</Link>
+                                <Link to='/About' className="text-white text-decoration-none hover-gold">HOME</Link>
                             </li>
-                            <li className="mb-1">
+                            {/* <li className="mb-1">
                                 <Link to='/Mission' className="text-white text-decoration-none hover-gold">Mission & Vision</Link>
-                            </li>
-                            <li className="mb-1">
+                            </li> */}
+                            {/* <li className="mb-1">
                                 <Link to="/Project" className="text-white text-decoration-none hover-gold">Project</Link>
                             </li>
                             <li className="mb-1">
                                 <Link to='/Events' className="text-white text-decoration-none hover-gold">Events</Link>
-                            </li>
+                            </li> */}
                             <li className="mb-1">
                                 <Link to="/Become a volunteer" className="text-white text-decoration-none hover-gold">Become a Volunteer</Link>
                             </li>
-                            <li className="mb-1">
+                            {/* <li className="mb-1">
                                 <Link to='/Donation' className="text-white text-decoration-none hover-gold">Donate Now</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -39,19 +39,19 @@ const Footer = () => {
                         <div className="contact-info">
                             <p className="mb-1 d-flex align-items-center">
                                 <FaPhone className="me-2 text-warning" />
-                                <span>Call us: 04179-295781</span>
+                                <span>Call us: *********</span>
                             </p>
                             <p className="mb-1 d-flex align-items-center">
                                 <FaMobileAlt className="me-2 text-warning" />
-                                <span>Mobile: +91-7598378989</span>
+                                <span>Mobile: +91-9543934015</span>
                             </p>
                             <p className="mb-2 d-flex align-items-center">
                                 <FaEnvelope className="me-2 text-warning" />
-                                <span>Email: nft.rss.ind@gmail.com</span>
+                                <span>Email: ********@gmail.com</span>
                             </p>
                             <p className="mb-2 d-flex align-items-center">
                                 <FaGlobe className="me-2 text-warning" />
-                                <span>Website: www.nationsfirsttrust.com</span>
+                                <span>Website: www.FREZIVA.com</span>
                             </p>
                         </div>
                         <div className="social-icons d-flex">
@@ -64,7 +64,7 @@ const Footer = () => {
                     {/* Newsletter Column */}
                     <div className="col-md-12 col-lg-4">
                         <h4 className="text-warning mb-3">Stay Updated</h4>
-                        <p className="mb-3">Subscribe to our newsletter for the latest updates</p>
+                        <p className="mb-3">Subscribe to our  for the latest updates</p>
                         <div className="input-group">
                             <input 
                                 type="email" 
@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className="row mt-3 pt-3 border-top border-secondary">
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         <h6 className="mb-0">
-                            Copyright © Nation's First Trust - All Rights Reserved
+                            Copyright © FRIZIVA - All Rights Reserved
                         </h6>
                     </div>
                     <div className="col-md-6 text-center text-md-end">

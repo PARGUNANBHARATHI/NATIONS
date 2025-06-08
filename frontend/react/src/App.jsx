@@ -6,20 +6,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
   import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-import Home from './pages/Home'
-import Contact from './pages/Contact'
-import About from './pages/About'
+import Track from './pages/Track'
 import Rootlayout from './layout/Rootlayout'
 import NotFound from './pages/NotFound'
-import Project from './pages/Project'
-import Events from './pages/Events'
-import Donation from './pages/Donation'
-import Volunteer from './pages/Volunteer'
-import Mission from './pages/Mission'
-import Board from './pages/Board'
-import Gallery from './pages/Gallery'
-
+import Product from './pages/Product'
+import Home from './pages/Home'
 
 
 function App() {
@@ -27,16 +18,10 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
 
     <Route path='/' element={<Rootlayout />}>
-      <Route index element={<Home />} />
-      <Route path='Contact' element={<Contact />} />
-      <Route path='About' element={<About />} />
-      <Route path='Project' element={<Project />} />
-      <Route path='Events' element={<Events />} />
-      <Route path='Donation' element={<Donation />} />
-      <Route path='Volunteer' element={<Volunteer />} />
-      <Route path='Mission' element={<Mission />} />
-      <Route path='Board of trustees' element={<Board />} />
-      <Route path='Gallery' element={<Gallery />} />
+       <Route index element={<Home />} />
+      <Route path='Track' element={<Track />} />
+           <Route path='Home' element={<Home />} />
+      <Route path='Product' element={<Product />} />
       <Route path='*' element={<NotFound />} />
 </Route>
       ))
