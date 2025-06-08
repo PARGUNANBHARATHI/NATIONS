@@ -13,7 +13,7 @@ const Footer = () => {
                         <h4 className="text-warning mb-3">Information</h4>
                         <ul className="list-unstyled">
                             <li className="mb-1">
-                                <Link to='/About' className="text-white text-decoration-none hover-gold">HOME</Link>
+                                <Link to='/Home' className="text-white text-decoration-none hover-gold">HOME</Link>
                             </li>
                             {/* <li className="mb-1">
                                 <Link to='/Mission' className="text-white text-decoration-none hover-gold">Mission & Vision</Link>
@@ -25,11 +25,11 @@ const Footer = () => {
                                 <Link to='/Events' className="text-white text-decoration-none hover-gold">Events</Link>
                             </li> */}
                             <li className="mb-1">
-                                <Link to="/Become a volunteer" className="text-white text-decoration-none hover-gold">Become a Volunteer</Link>
+                                <Link to="/Product" className="text-white text-decoration-none hover-gold">Product</Link>
                             </li>
-                            {/* <li className="mb-1">
-                                <Link to='/Donation' className="text-white text-decoration-none hover-gold">Donate Now</Link>
-                            </li> */}
+                            { <li className="mb-1">
+                                <Link to='/Track' className="text-white text-decoration-none hover-gold">Track</Link>
+                            </li> }
                         </ul>
                     </div>
 
